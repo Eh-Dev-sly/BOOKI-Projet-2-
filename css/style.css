@@ -1,7 +1,57 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif; /* Font de la page */
+    margin: 0px; /* Supprimer les possibles marges automatiques */
+    padding: 0px; /* Supprimer les possibles paddings automatiques */
 }
+
+/****** header ******/
+header {
+    width: 100%; /* Largeur de l'entête */
+    height: 79px; /* Hauteur de l'entête */
+
+}
+
+/****** navBar ******/
+nav {
+    width: 100%; /* Largeur de la navBar */
+    height: 100%; /* Hauteur de la navBar */
+    margin: auto; /* Centrer la navBar */
+    display: flex; /* Afficher la navBar en flex */
+    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical au centre */
+    box-sizing: border-box; /* Prendre en compte la bordure et le padding dans la largeur totale */
+}
+
+/* CSS logo navBar */
+nav .navbar-logo .logo {
+    margin: 0; /* Suppression de la marge */
+    width: 61.09px; /* Largeur du logo */
+    height: 19px; /* Hauteur du logo */
+}
+
+/* Personnalisation des Boutons du Menu */
+.menu-list {
+    display: flex; /* Alignement en ligne */
+    list-style: none; /* Suppression des puces */
+    font-size: 16px; /* Taille de la police */
+    gap: 35px; /* Espacement entre les boutons */
+    margin-bottom: 35px;
+}
+
+.menu-list a{
+    transition: color 0.1s ease;
+    padding: 10px /* Ajout d'un padding pour le survol */
+}
+
+/* Changement de Couleur et Ajout de la bordure au Survol */
+.menu-list a:hover{
+    color : var(--main-color); /* Changement de la couleur */
+    cursor: pointer; /* Changement de forme du pointeur */
+    border-top: var(--main-color) solid 3px; /* Apparition de la bordure */
+}
+
 
 :root {
     --main-color: #0065FC;
