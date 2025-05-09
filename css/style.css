@@ -31,12 +31,12 @@ nav .navbar-logo .logo {
     height: 19px; /* Hauteur du logo */
 }
 
-/* Personnalisation des Services */
+/* Personnalisation des Boutons du Menu */
 .menu-list {
     display: flex; /* Alignement en ligne */
     list-style: none; /* Suppression des puces */
     font-size: 16px; /* Taille de la police */
-    gap: 35px; /* Espacement entre les services */
+    gap: 35px; /* Espacement entre les boutons */
     margin-bottom: 35px;
 }
 
