@@ -1,7 +1,57 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif; /* Font de la page */
+    margin: 0px; /* Supprimer les possibles marges automatiques */
+    padding: 0px; /* Supprimer les possibles paddings automatiques */
 }
+
+/****** header ******/
+header {
+    width: 100%; /* Largeur de l'entête */
+    height: 79px; /* Hauteur de l'entête */
+
+}
+
+/****** navBar ******/
+nav {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* CSS logo navBar */
+nav .navbar-logo .logo {
+    margin: 0;
+    width: 61.09px;
+    height: 19px;
+}
+
+/* Personnalisation des Services */
+.menu-list {
+    display: flex; /* Alignement en ligne */
+    list-style: none; /* Suppression des puces */
+    font-size: 16px; /* Taille de la police */
+    gap: 35px; /* Espacement entre les services */
+    margin-bottom: 35px;
+}
+
+.menu-list a{
+    transition: color 0.1s ease;
+    padding: 10px /* Ajout d'un padding pour le survol */
+}
+
+/* Changement de Couleur et Ajout de la bordure au Survol */
+.menu-list a:hover{
+    color : var(--main-color); /* Changement de la couleur */
+    cursor: pointer; /* Changement de forme du pointeur */
+    border-top: var(--main-color) solid 3px; /* Apparition de la bordure */
+}
+
 
 :root {
     --main-color: #0065FC;
