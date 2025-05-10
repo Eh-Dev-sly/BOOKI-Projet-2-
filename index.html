@@ -37,18 +37,20 @@
                     <h1 class="promesse-title">Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p class="promesse-subtitle">En plein centre-ville ou en pleine nature</p>
                 </div>
-                <div class="search-bar">
-                    <div class="search-bar___icon"> 
-                        <img src="images/icon/icon-localisation.svg" alt="icon de localisation" class="icon-localisation">
+                <form action="" method="get" class="search-bar">
+                    <div class="search-bar__icon">
+                        <img src="images/icon/icon-localisation.svg" alt="">
                     </div>
-                    <div class="search-bar____input">
-                        <input type="search" class="input-area" placeholder="Marseille, France" aria-label="Rechercher un hébergement">
+                    <div class="search-bar__search">
+                    <input type="search" name="place" placeholder="Marseille, France" class="input">
                     </div>
-                    <div class="search-bar___button">
-                        <button class="button-submit" type="submit">Rechercher</button>
-                        <img src="images/icon/icon-search.svg" alt="Bouton de recherche" class="icon-search">
+                    <div class="search-bar__button">
+                        <button type="submit" class="button">
+                            <span class="text">Rechercher</span>
+                            <img src="images/icon/icon-search.svg" alt="icone de recherche" class="icon">
+                        </button>
                     </div>
-                </div>
+                </form>
             </section>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">

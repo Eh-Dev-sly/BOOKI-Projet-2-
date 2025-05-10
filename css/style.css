@@ -52,7 +52,6 @@ nav .navbar-logo .logo {
     border-top: var(--main-color) solid 3px; /* Apparition de la bordure */
 }
 
-
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
