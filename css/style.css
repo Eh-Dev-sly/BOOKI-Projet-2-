@@ -41,15 +41,97 @@ nav .navbar-logo .logo {
 }
 
 .menu-list a{
-    transition: color 0.1s ease;
     padding: 10px /* Ajout d'un padding pour le survol */
 }
 
 /* Changement de Couleur et Ajout de la bordure au Survol */
 .menu-list a:hover{
+    transition: color 0.1s ease; /* Animation de la couleur */
     color : var(--main-color); /* Changement de la couleur */
     cursor: pointer; /* Changement de forme du pointeur */
     border-top: var(--main-color) solid 3px; /* Apparition de la bordure */
+}
+
+/****** Info Group ******/
+.info-group {
+    display: flex; /* Alignement en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    justify-content: space-between; /* Espacement entre les éléments */
+    gap: 35px ; /* Espacement entre les éléments */
+}
+
+/* Promesses */
+.promesse {
+    display: flex; /* Alignement en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    gap: 8px; /* Espacement entre les éléments */
+}
+
+/* Search-Bar / Barre de Recherche */
+.search-bar {
+    height: 49px; /* Hauteur de la barre de recherche */
+    display: flex; /* Affichage en ligne */
+    align-items: center; /* Alignement vertical au centre */
+    width: 100%; /* Largeur de la barre de recherche */
+}
+
+.search-bar .search-bar__icon {
+    display: flex; /* Appliquer flexbox sur l'icône pour l'aligner correctement */
+    align-items: center; /* Centrer verticalement l'icône à l'intérieur de son conteneur */
+    justify-content: center; /* Centrer horizontalement l'icône si nécessaire */
+    width: 50px; /* Largeur de l'espace */
+    height: 49px; /* Hauteur de l'espace */
+    background-color: #F2F2F2; /* Couleur de fond */
+    border-radius: 15px 0px 0px 15px; /* Arrondir les coins */
+}
+
+.search-bar .search-bar__icon .icon{
+    width: 14px; /* Largeur de l'icône */
+    height: auto; /* Hauteur de l'icône */
+}
+
+.search-bar .search-bar__search {
+    display: flex; /* Appliquer flexbox sur l'icône pour l'aligner correctement */
+}
+
+.search-bar .search-bar__search .input {
+    display: flex; /* Appliquer flexbox sur l'icône pour l'aligner correctement */
+    text-align: center; /* Centrer le texte à l'intérieur de l'input */
+    width: 147px; /* Largeur de l'espace */
+    height: 49px; /* Hauteur de l'espace */
+    font-weight: 600 ;
+    border-left: none; /* Supprimer la bordure gauche */
+    border-right: none; /* Supprimer la bordure droite */
+    border-top: 1px solid #F2F2F2; /* Bordure supérieure */
+    border-bottom: 1px solid #F2F2F2; /* Bordure inférieure */
+}
+
+.search-bar .search-bar__button{
+    display: flex; /* Appliquer flexbox sur l'icône pour l'aligner correctement */
+    align-items: center; /* Centrer verticalement l'icône à l'intérieur de son conteneur */
+    justify-content: center; /* Centrer horizontalement l'icône si nécessaire */
+    height: 100%; /* Hauteur de l'espace */
+    width: 132px; /* Largeur de l'espace */
+    background-color: #0065FC; /* Couleur de fond */
+    border-radius: 0px 15px 15px 0px; /* Arrondir les coins */
+    border: none; /* Supprimer la bordure */
+}
+
+.search-bar .search-bar__button :hover{
+    cursor: pointer; /* Changement de forme du pointeur lorsqu'il survol le bouton */
+}
+
+.search-bar .search-bar__button .button{
+    background-color: transparent; /* Couleur de fond */
+    border: none; /* Supprimer la bordure */
+}
+.search-bar .search-bar__button .text{
+    color: white; /* Couleur du texte */
+    font-weight: 600; /* Poids de la police */
+    font-size: 16px; /* Taille de la police */
+}
+.search-bar .search-bar__button .icon{
+    display: none; /* Masquage de l'icône pour Desktop & Tablette */
 }
 
 :root {
