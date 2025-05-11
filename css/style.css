@@ -88,7 +88,6 @@ nav .navbar-logo .logo {
     width: 377px; /* Largeur de la barre de recherche */
     border: 1px solid #F2F2F2; /* Bordure */
     border-radius: 15px; /* Arrondir les coins */
-    overflow: hidden; /* Évite les débordements */
 }
 
 /* Icône de localisation */
