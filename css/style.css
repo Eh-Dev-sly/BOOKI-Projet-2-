@@ -56,8 +56,9 @@ nav .navbar-logo .logo {
 .info-group {
     display: flex; /* Alignement en ligne */
     flex-direction: column; /* Alignement en colonne */
-    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: flex-start; /* Alignement à gauche pour tous les enfants */
     gap: 35px ; /* Espacement entre les éléments */
+    padding-left: 20px; /* Alignement horizontal global avec le titre */
 }
 
 /* Promesses */
@@ -67,49 +68,70 @@ nav .navbar-logo .logo {
     gap: 8px; /* Espacement entre les éléments */
 }
 
+.promesse__title {
+    font-size: 24px; /* Taille de la police du titre */
+    font-weight: bold; /* Poids de la police */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+.promesse__subtitle {
+    margin: 0; /* Supprimer les marges par défaut */
+    font-size: 16px; /* Taille de la police du sous-titre */
+    color: #666; /* Couleur du texte */
+}
+
 /* Search-Bar / Barre de Recherche */
 .search-bar {
     height: 49px; /* Hauteur de la barre de recherche */
     display: flex; /* Affichage en ligne */
     align-items: center; /* Alignement vertical au centre */
-    width: 100%; /* Largeur de la barre de recherche */
+    width: 377px; /* Largeur de la barre de recherche */
+    border: 1px solid #F2F2F2; /* Bordure */
+    border-radius: 15px; /* Arrondir les coins */
+    overflow: hidden; /* Évite les débordements */
 }
 
+/* Icône de localisation */
 .search-bar .search-bar__icon {
     display: flex; /* Appliquer flexbox sur l'icône pour l'aligner correctement */
     align-items: center; /* Centrer verticalement l'icône à l'intérieur de son conteneur */
     justify-content: center; /* Centrer horizontalement l'icône si nécessaire */
     width: 50px; /* Largeur de l'espace */
-    height: 49px; /* Hauteur de l'espace */
+    height: 100%; /* Hauteur de l'espace */
     background-color: #F2F2F2; /* Couleur de fond */
     border-radius: 15px 0px 0px 15px; /* Arrondir les coins */
 }
 
-.search-bar .search-bar__icon .icon{
+.search-bar .search-bar__icon .icon {
     width: 14px; /* Largeur de l'icône */
     height: auto; /* Hauteur de l'icône */
 }
 
-.search-bar .search-bar__search {
-    display: flex; /* Appliquer flexbox sur l'icône pour l'aligner correctement */
+/* Zone de texte */
+.search-bar .search-bar__text-area {
+    display: flex; /* Appliquer flexbox */
+    align-items: center; /* Centrer verticalement */
+    height: 100%; /* Hauteur de l'espace */
+    flex: 1; /* Prend tout l'espace disponible */
 }
 
-.search-bar .search-bar__search .input {
-    display: flex; /* Appliquer flexbox sur l'icône pour l'aligner correctement */
+.search-bar .search-bar__text-area .input {
+    display: flex; /* Appliquer flexbox */
     text-align: center; /* Centrer le texte à l'intérieur de l'input */
-    width: 147px; /* Largeur de l'espace */
-    height: 49px; /* Hauteur de l'espace */
-    font-weight: 600 ;
-    border-left: none; /* Supprimer la bordure gauche */
-    border-right: none; /* Supprimer la bordure droite */
-    border-top: 1px solid #F2F2F2; /* Bordure supérieure */
-    border-bottom: 1px solid #F2F2F2; /* Bordure inférieure */
+    font-weight: 700 ; /* Poids de la police */
+    width: 100%; /* Largeur de l'espace */
+    height: 100%; /* Hauteur de l'espace */
+    border : none; /* Supprimer la bordure */
+    font-size: 18px; /* Taille de la police */
+    padding: 0 10px; /* Espacement intérieur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
 }
 
-.search-bar .search-bar__button{
-    display: flex; /* Appliquer flexbox sur l'icône pour l'aligner correctement */
-    align-items: center; /* Centrer verticalement l'icône à l'intérieur de son conteneur */
-    justify-content: center; /* Centrer horizontalement l'icône si nécessaire */
+/* Bouton de recherche */
+.search-bar .search-bar__button {
+    display: flex; /* Appliquer flexbox */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
     height: 100%; /* Hauteur de l'espace */
     width: 132px; /* Largeur de l'espace */
     background-color: #0065FC; /* Couleur de fond */
@@ -117,22 +139,30 @@ nav .navbar-logo .logo {
     border: none; /* Supprimer la bordure */
 }
 
-.search-bar .search-bar__button :hover{
-    cursor: pointer; /* Changement de forme du pointeur lorsqu'il survol le bouton */
+.search-bar .search-bar__button :hover {
+    cursor: pointer; /* Changement de forme du pointeur lorsqu'il survole le bouton */
 }
 
-.search-bar .search-bar__button .button{
+.search-bar .search-bar__button .button {
     background-color: transparent; /* Couleur de fond */
     border: none; /* Supprimer la bordure */
+    display: flex; /* Flex pour centrer le contenu */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
 }
-.search-bar .search-bar__button .text{
+
+.search-bar .search-bar__button .text {
     color: white; /* Couleur du texte */
     font-weight: 600; /* Poids de la police */
     font-size: 16px; /* Taille de la police */
 }
-.search-bar .search-bar__button .icon{
+
+.search-bar .search-bar__button .icon {
     display: none; /* Masquage de l'icône pour Desktop & Tablette */
 }
+
 
 :root {
     --main-color: #0065FC;
