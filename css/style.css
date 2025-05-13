@@ -61,6 +61,8 @@ nav .navbar-logo .logo {
     padding-left: 20px; /* Alignement horizontal global avec le titre */
 }
 
+/*** Headline ***/
+
 /* Promesses */
 .promesse {
     display: flex; /* Alignement en ligne */
@@ -69,7 +71,7 @@ nav .navbar-logo .logo {
 }
 
 .promesse__title {
-    font-size: 24px; /* Taille de la police du titre */
+    font-size: 22px; /* Taille de la police du titre */
     font-weight: bold; /* Poids de la police */
     margin: 0; /* Supprimer les marges par défaut */
 }
@@ -162,6 +164,55 @@ nav .navbar-logo .logo {
     display: none; /* Masquage de l'icône pour Desktop & Tablette */
 }
 
+/*** Filtres ***/
+.filters {
+    display: flex; /* Affichage en ligne */
+    align-items: center; /* Alignement vertical au centre */
+    height: 50px; /* Hauteur de la barre de filtre */
+    gap: 15px; /* Espacement entre les boutons */
+    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
+}
+
+.filters h2{
+    font-size: 18px; /*Taille de la police*/
+    font-weight: 700; /* Epaisseur de lap*/
+}
+
+.filters__button-group {
+    display: flex; /* Affichage en ligne */
+    gap: 15px; /* Espacement entre les boutons */
+    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
+}
+
+.filters__button {
+    display: flex; /* Affichage en ligne */
+    align-items: center; /* Alignement vertical au centre */
+    height: 50px; /* Hauteur du bouton */
+    width: fit-content ; /* Largeur du bouton */
+    padding: 4px 19px 4px 19px; /* Espacement intérieur */
+    border: 2px solid #D9D9D9; /* Bordure */
+    border-radius: 25px; /* Arrondir les coins */
+    background-color: transparent; /* Couleur de fond */
+    gap: 10px; /* Espacement entre les éléments */
+}
+.filters__button:hover {
+    transition: 0.1s ease; /* Animation de la couleur */
+    background-color: var(--filter-bg-color); /* Couleur de fond au survol */
+    cursor: pointer; /* Changement de forme du pointeur */
+}
+
+.filters__button img {
+    width: 22px; /* Largeur de l'icône */
+    height: 22px; /* Hauteur de l'icône */
+}
+
+.filters__button span{
+    font-size: 17px; /* Taille de la police */
+    font-weight: 700; /* Poids de la police */
+    font-style: normal; /* Style de la police */
+    line-height: normal; /* Hauteur de ligne normale */
+    text-align: center; /* Alignement du texte */
+}
 
 :root {
     --main-color: #0065FC;
