@@ -216,6 +216,11 @@ nav .navbar-logo .logo {
 }
 
 /*** InfoBar ***/
+.info-group{
+    margin-bottom: 35px; /* Espacement avec la section "hebergement" */
+}
+
+
 .infoBar {
     display: flex; /* Affichage en ligne */
     flex-direction: row; /* Alignement en ligne */
@@ -267,6 +272,7 @@ body {
 }
 
 a {
+    width: fit-content;
     color: inherit;
     text-decoration: none;
 }
@@ -314,8 +320,65 @@ a {
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    width: 65%; /* Largeur de la section */
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    flex-wrap: wrap;
+    padding: 30px; /* Espacement intérieur */
+    gap: 30px; /* Espacement entre les éléments */
 }
+.hebergements .hebergements__cards-group {
+    gap: 30px; /* Espacement entre les cartes */
+}
+
+/*** Titre de la Section ***/
+.hebergements__title {
+    width: 100%; /* Largeur de la section */
+    height: 26px; /* Hauteur de la section */
+}
+.hebergements__title h2 {
+    font-size: 22px; /*Taille de la police*/
+    font-weight: 700; /*Poids de la police*/
+}
+
+/*** Carte ***/
+.hebergements__cards-group .hebergements-card {
+    width: 100%; /* Largeur de la carte */ 
+    max-width: 250px; /* Largeur maximale de la carte */
+    background-color: white; /* Couleur de fond */
+    border-radius: 20px; /* Arrondir les coins */
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    padding-bottom: 15px; /* Espacement intérieur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+.card__content {
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    align-items: flex-start; /* Alignement à gauche pour tous les enfants */
+    gap: 8px; /* Espacement entre les éléments */
+    padding: 0px 15px 0px 15px; /* Espacement intérieur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+.hebergements-card img {
+    height: 124px; /* Hauteur de l'image */
+    width: 100%; /* Largeur de l'image */
+    border: 5px solid white; /* Bordure blanche */
+    border-radius: 20px 20px 0px 0px; /* Arrondir les coins supérieurs */
+    object-fit: cover ; /* Ajuster l'image pour remplir le conteneur */
+    box-sizing: border-box; /* Inclure la bordure dans la largeur totale */
+}
+.hebergements-card .content-text {
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    gap: 8px; /* Espacement entre les éléments */
+}
+
+.hebergements-card .content-text h3,
+.hebergements-card .content-text p {
+    height: auto; /* Hauteur automatique */
+    width: 100%; /* Largeur de l'espace */
+}
+
 
 /****** Populaires ***********/
 .populaires {
