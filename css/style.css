@@ -41,7 +41,7 @@ nav .navbar-logo .logo {
 }
 
 .menu-list a{
-    padding: 10px /* Ajout d'un padding pour le survol */
+    padding: 10px; /* Ajout d'un padding pour le survol */
 }
 
 /* Changement de Couleur et Ajout de la bordure au Survol */
@@ -328,7 +328,10 @@ a {
     gap: 30px; /* Espacement entre les éléments */
 }
 .hebergements .hebergements__cards-group {
-    gap: 30px; /* Espacement entre les cartes */
+    display: flex; /* Affichage en ligne */
+    flex-direction: row; /* Alignement en ligne */
+    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
+    gap: 30px; /* Espacement entre les éléments */
 }
 
 /*** Titre de la Section ***/
@@ -343,8 +346,8 @@ a {
 
 /*** Carte ***/
 .hebergements__cards-group .hebergements-card {
-    width: 100%; /* Largeur de la carte */ 
-    max-width: 250px; /* Largeur maximale de la carte */
+    width: 30%; /* Largeur de la carte */
+    /*max-width: 250px; /* Largeur maximale de la carte */
     background-color: white; /* Couleur de fond */
     border-radius: 20px; /* Arrondir les coins */
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -379,7 +382,10 @@ a {
     width: 100%; /* Largeur de l'espace */
 }
 
-
+.hebergements__more{
+    font-weight: 700;
+    font-size: 18px; /* Taille de la police */
+}
 /****** Populaires ***********/
 .populaires {
     width: 32%;
