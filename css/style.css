@@ -280,6 +280,7 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+    font-weight: 700;
 }
 
 .card {
@@ -431,9 +432,57 @@ a {
     margin-bottom: 5px;
 }
 
+/****** Activités ***********/
+.activites{
+    width: 100%; /* Largeur de la section */
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    padding: 30px; /* Espacement intérieur */
+    gap: 30px; /* Espacement entre les éléments */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
 
+.activites__title {
+    width: fit-content; /* Largeur de la section */
+}
 
+.activites-cards__group {
+    width: 100%; /* Largeur de la section */
+    display: flex; /* Affichage en ligne */
+    flex-direction: row; /* Alignement en ligne */
+    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
+    gap: 30px; /* Espacement entre les éléments */
+}
 
+.activites-card{
+    height: fit-content; /* Hauteur de la carte */
+    width: 25%; /* Largeur de la carte */
+    background-color: white;
+    border-radius: 20px; /* Arrondir les coins */
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* Ombre */
+}
+
+.activites-card a {
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    height: 100%; /* Hauteur de la carte */
+    width: 100%; /* Largeur de la carte */
+    border-radius: 20px; /* Arrondir les coins */
+}
+
+.activites img{
+    height: 380px; /* Hauteur de l'image */
+    width: 100%; /* Largeur de l'image */
+    border-radius: 20px 20px 0px 0px; /* Arrondir les coins supérieurs */
+    object-fit: cover ; /* Ajuster l'image pour remplir le conteneur */
+    box-sizing: border-box; /* Inclure la bordure dans la largeur totale */
+}
+
+.activites-card__content{
+    box-sizing: border-box;
+    padding: 20px 19px 20px 19px; /* Espacement intérieur */
+    height: 100%; /* Hauteur de la carte */
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
