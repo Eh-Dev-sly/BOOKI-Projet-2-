@@ -499,7 +499,7 @@ a {
 footer {
     background-color: var(--main-bg-color); /* Couleur de fond */
     width: 100%; /* Largeur de la section */
-    height: 100%; /* Hauteur de la section */
+    height: fit-content; /* Hauteur de la section */
     display: flex; /* Affichage en ligne */
     flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
     box-sizing: border-box; /* Prendre en compte la bordure et le padding dans la largeur totale */
