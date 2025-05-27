@@ -494,6 +494,49 @@ a {
     padding: 20px 19px 20px 19px; /* Espacement intérieur */
     font-size: 16px;
 }
+
+/*********** FOOTER ***********/
+footer {
+    background-color: var(--main-bg-color); /* Couleur de fond */
+    width: 100%; /* Largeur de la section */
+    height: 100%; /* Hauteur de la section */
+    display: flex; /* Affichage en ligne */
+    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
+    box-sizing: border-box; /* Prendre en compte la bordure et le padding dans la largeur totale */
+}
+
+/***** Footer Section ******/
+.footer__section {
+    width: calc(100% / 3); /* Largeur de la section */
+}
+
+/**** Footer Content ****/
+.footer__content{
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    align-items: flex-start; /* Alignement à gauche pour tous les enfants */
+    gap: 15px; /* Espacement entre les éléments */
+    padding: 20px; /* Espacement intérieur */
+    height: 100%; /* Hauteur de la section */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+}
+
+/** Footer Title **/
+.footer__title {
+    font-size: 18px; /* Taille de la police */
+}
+
+/** Footer List **/
+.footer__list ul{
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    gap: 15px;
+}
+/* Footer Link */
+.footer__list li {
+    list-style: none; /* Supprimer les puces */
+    font-size: 16px; /* Taille de la police */
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
