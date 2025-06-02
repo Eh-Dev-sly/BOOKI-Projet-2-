@@ -77,10 +77,6 @@ nav .navbar-logo .logo {
     gap: 35px; /* Espacement entre les boutons */
     margin-bottom: 35px;
 }
-/** Lien navBar **/
-.menu-list a{
-    padding: 10px; /* Ajout d'un padding pour le survol */
-}
 
 /**--> Changement de Couleur et Ajout de la bordure au survol des liens <--**/
 .menu-list a:hover{
@@ -112,7 +108,6 @@ main {
     flex-direction: column; /* Alignement en colonne */
     align-items: flex-start; /* Alignement à gauche pour tous les enfants */
     gap: 35px ; /* Espacement entre les éléments */
-    padding-left: 20px; /* Alignement horizontal global avec le titre */
 }
 
 /**** Promesses ****/
@@ -222,7 +217,6 @@ main {
 .filters {
     display: flex; /* Affichage en ligne */
     align-items: center; /* Alignement vertical au centre */
-    height: 50px; /* Hauteur de la barre de filtre */
     gap: 15px; /* Espacement entre les boutons */
     flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
 }
@@ -472,33 +466,34 @@ main {
 .activites-card{
     display: flex; /* Affichage en ligne */
     flex-direction: column; /* Alignement en colonne */
-    height: 439px; /* Hauteur de la carte */
     width: 25%; /* Largeur de la carte */
     background-color: white; /* Couleur de fond */
     border-radius: 20px; /* Arrondir les coins */
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* Ombre */
+    position: relative;
 }
 /** Lien de la carte **/
 .activites-card a {
     display: flex; /* Affichage en ligne */
     flex-direction: column; /* Alignement en colonne */
     width: 100%; /* Largeur de la carte */
+    height: 100%; /* Hauteur de la carte */
     border-radius: 20px; /* Arrondir les coins */
-    height: fit-content; /* Hauteur de la carte */
 }
 /** Image de la carte **/
 .activites img{
-    height: 380px; /* Hauteur de l'image */
-    width: 100%; /* Largeur de l'image */
-    border-radius: 20px 20px 0px 0px; /* Arrondir les coins supérieurs */
-    object-fit: cover ; /* Ajuster l'image pour remplir le conteneur */
-    box-sizing: border-box; /* Inclure la bordure dans la largeur totale */
+    height: 380px; /* Fixe la hauteur à toutes les images */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    position: relative;
 }
 /** Div contenu de la carte **/
 .activites-card__content{
+    padding: 20px 19px; /* Espacement intérieur */
+    font-size: 16px; /* Taille de la police */
     box-sizing: border-box; /* Inclure le padding dans la largeur */
-    padding: 20px 19px 20px 19px; /* Espacement intérieur */
-    font-size: 16px;
+    border-radius: 0 0 20px 20px; /* Arrondir les coins inférieurs */
 }
 
 /********** FOOTER **********/
@@ -549,6 +544,11 @@ footer {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .filters {
+        flex-direction: column; /* Alignement en colonne */
+        align-items: flex-start; /* Alignement à gauche pour tous les enfants */
+        gap: 20px;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -579,6 +579,40 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-cards__group {
+        width: 100%; /* Largeur de la section */
+        height: auto;
+        display: flex; /* Affichage en ligne */
+        flex-direction: row; /* Alignement en ligne */
+        gap: 30px; /* Espacement entre les éléments */
+    }
+    .activites-card{
+        display: flex; /* Affichage en ligne */
+        flex-direction: column; /* Alignement en colonne */
+        width: 25%; /* Largeur de la carte */
+        background-color: white; /* Couleur de fond */
+        border-radius: 20px; /* Arrondir les coins */
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* Ombre */
+    }
+    .activites-card a {
+        display: flex; /* Affichage en ligne */
+        flex-direction: column; /* Alignement en colonne */
+        width: 100%; /* Largeur de la carte */
+        height: 100%; /* Hauteur de la carte */
+    }
+    .activites img{
+        height: 200px; /* Fixe la hauteur à toutes les images */
+        width: 100%; /* Largeur de l'image */
+        object-fit: cover; /* Ajuster l'image pour remplir le conteneur */
+        border-radius: 20px 20px 0 0; /* Arrondir les coins supérieurs */
+    }
+    .activites-card__content{
+        padding: 20px 19px; /* Espacement intérieur */
+        font-size: 16px; /* Taille de la police */
+        box-sizing: border-box; /* Inclure le padding dans la largeur */
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
