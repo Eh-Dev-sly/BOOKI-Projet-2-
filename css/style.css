@@ -60,11 +60,12 @@ nav {
     display: flex; /* Afficher la navBar en flex */
     flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
     justify-content: space-between; /* Espacement entre les éléments */
-    align-items: center; /* Alignement vertical au centre */
+
     box-sizing: border-box; /* Prendre en compte la bordure et le padding dans la largeur totale */
 }
 /** Logo navBar **/
 nav .navbar-logo .logo {
+    padding-top: 30px; /* Espacement supérieur */
     margin: 0; /* Suppression de la marge */
     width: 61.09px; /* Largeur du logo */
     height: 19px; /* Hauteur du logo */
@@ -75,7 +76,16 @@ nav .navbar-logo .logo {
     list-style: none; /* Suppression des puces */
     font-size: 16px; /* Taille de la police */
     gap: 35px; /* Espacement entre les boutons */
-    margin-bottom: 35px;
+}
+
+.menu-list a {
+    display: flex; /* Alignement en ligne */
+    padding-top: 16px; /* Espacement intérieur */
+    list-style: none; /* Suppression des puces */
+    font-size: 16px; /* Taille de la police */
+    gap: 35px; /* Espacement entre les boutons */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+    border-top: transparent solid 3px; /* Apparition de la bordure */
 }
 
 /**--> Changement de Couleur et Ajout de la bordure au survol des liens <--**/
@@ -617,5 +627,39 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+        /****** navBar ******/
+    nav {
+        width: 100%; /* Largeur de la navBar */
+        height: 100%; /* Hauteur de la navBar */
+        margin: auto; /* Centrer la navBar */
+        display: flex; /* Afficher la navBar en flex */
+        flex-direction: column; /* Alignement en colonne */
+        flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
+        justify-content: space-between; /* Espacement entre les éléments */
+        align-items:center ; /* Alignement vertical au centre */
+        box-sizing: border-box; /* Prendre en compte la bordure et le padding dans la largeur totale */
+    }
+    /** Logo navBar **/
+    nav .navbar-logo .logo {
+        margin: 0; /* Suppression de la marge */
+        width: 61.09px; /* Largeur du logo */
+        height: 19px; /* Hauteur du logo */
+        padding: 30px;
+    }
+    /** Personnalisation des Boutons du Menu **/
+    .menu-list {
+        display: flex; /* Alignement en ligne */
+        list-style: none; /* Suppression des puces */
+        font-size: 16px; /* Taille de la police */
+        gap: 35px; /* Espacement entre les boutons */
+        margin-bottom: 35px;
+    }
+
+    /**--> Changement de Couleur et Ajout de la bordure au survol des liens <--**/
+    .menu-list a:hover{
+        transition: color 0.1s ease; /* Animation de la couleur */
+        color : var(--main-color); /* Changement de la couleur */
+        cursor: pointer; /* Changement de forme du pointeur */
+        border-top: var(--main-color) solid 3px; /* Apparition de la bordure */
+    }
 }
