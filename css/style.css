@@ -54,14 +54,9 @@ header {
 
 /****** navBar ******/
 nav {
-    width: 100%; /* Largeur de la navBar */
-    height: 100%; /* Hauteur de la navBar */
-    margin: auto; /* Centrer la navBar */
     display: flex; /* Afficher la navBar en flex */
     flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
     justify-content: space-between; /* Espacement entre les éléments */
-
-    box-sizing: border-box; /* Prendre en compte la bordure et le padding dans la largeur totale */
 }
 /** Logo navBar **/
 nav .navbar-logo .logo {
@@ -97,11 +92,6 @@ nav .navbar-logo .logo {
 }
 
 /********** MAIN **********/
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 35px; /* ou ce que tu veux comme espacement */
-}
 .main-container {
     width: 100%; /* Largeur de la page */
     max-width: 1440px; /* Largeur maximale de la page */
@@ -109,7 +99,7 @@ main {
     box-sizing: border-box; /* Inclure le padding dans la largeur totale */
     display: flex; /* Affichage en ligne */
     flex-direction: column; /* Alignement en colonne */
-    gap: 30px; /* Espacement entre les sections */
+    gap: 35px; /* Espacement entre les sections */
 }
 
 /******** info Group ********/
@@ -246,9 +236,9 @@ main {
     display: flex; /* Affichage en ligne */
     align-items: center; /* Alignement vertical au centre */
     height: 50px; /* Hauteur du bouton */
-    width: fit-content ; /* Largeur du bouton */
     padding: 4px 19px 4px 19px; /* Espacement intérieur */
     border: 2px solid #D9D9D9; /* Bordure */
+    width: fit-content; /* Largeur du bouton */
     border-radius: 25px; /* Arrondir les coins */
     background-color: transparent; /* Couleur de fond */
     gap: 10px; /* Espacement entre les éléments */
@@ -283,7 +273,6 @@ main {
 .infoBar {
     display: flex; /* Affichage en ligne */
     flex-direction: row; /* Alignement en ligne */
-    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
     align-items: center; /*Alignement des composants au centre verticalement*/
     height: 24px; /* Hauteur de la barre d'information */
 }
@@ -331,8 +320,6 @@ main {
     width: 65%; /* Largeur de la section */
     display: flex; /* Affichage en ligne */
     flex-direction: column; /* Alignement en colonne */
-    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
-    padding: 30px; /* Espacement intérieur */
     gap: 30px; /* Espacement entre les éléments */
 }
 /** Div du titre de la section HEBERGEMENT**/
@@ -349,15 +336,13 @@ main {
 /** Groupe de cartes de HEBERGEMENT **/
 .hebergements .hebergements__cards-group {
     display: flex; /* Affichage en ligne */
-    flex-direction: row; /* Alignement en ligne */
     flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
     gap: 30px; /* Espacement entre les éléments */
 }
 
 /** Carte de la section HEBERGEMENT **/
 .hebergements__cards-group .hebergements-card {
-    width: 30%; /* Largeur de la carte */
-    max-width: 250px; /* Largeur maximale de la carte */
+    width: calc((100% - 60px) / 3); /* Largeur de la carte. Taille de 100% moins les 2*3Opx de gap le tout divisé par 3 */
     background-color: white; /* Couleur de fond */
     border-radius: 20px; /* Arrondir les coins */
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -476,7 +461,7 @@ main {
 .activites-card{
     display: flex; /* Affichage en ligne */
     flex-direction: column; /* Alignement en colonne */
-    width: 25%; /* Largeur de la carte */
+    width: calc((100% - 90px) / 4);  /* Largeur de la carte. Taille de 100% moins les 3*3Opx de gap le tout divisé par 4 */
     background-color: white; /* Couleur de fond */
     border-radius: 20px; /* Arrondir les coins */
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* Ombre */
@@ -554,6 +539,15 @@ footer {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .main-container {
+    width: 100%; /* Largeur de la page */
+    max-width: 1024px; /* Largeur maximale de la page */
+    padding: 0 50px; /* Espacement intérieur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    gap: 30px; /* Espacement entre les sections */
+}
     .filters {
         flex-direction: column; /* Alignement en colonne */
         align-items: flex-start; /* Alignement à gauche pour tous les enfants */
@@ -629,15 +623,11 @@ footer {
 @media (max-width: 767.98px) {
         /****** navBar ******/
     nav {
-        width: 100%; /* Largeur de la navBar */
-        height: 100%; /* Hauteur de la navBar */
-        margin: auto; /* Centrer la navBar */
         display: flex; /* Afficher la navBar en flex */
-        flex-direction: column; /* Alignement en colonne */
-        flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
-        justify-content: space-between; /* Espacement entre les éléments */
-        align-items:center ; /* Alignement vertical au centre */
-        box-sizing: border-box; /* Prendre en compte la bordure et le padding dans la largeur totale */
+        flex-direction: column;
+        justify-content: center;
+        outline: 1px solid red;
+        align-items: center;
     }
     /** Logo navBar **/
     nav .navbar-logo .logo {
@@ -655,11 +645,161 @@ footer {
         margin-bottom: 35px;
     }
 
-    /**--> Changement de Couleur et Ajout de la bordure au survol des liens <--**/
-    .menu-list a:hover{
-        transition: color 0.1s ease; /* Animation de la couleur */
-        color : var(--main-color); /* Changement de la couleur */
-        cursor: pointer; /* Changement de forme du pointeur */
-        border-top: var(--main-color) solid 3px; /* Apparition de la bordure */
+        /********** MAIN **********/
+    .main-container {
+        width: 100%; /* Largeur de la page */
+        max-width: 767.98px;
+        box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+        display: flex; /* Affichage en ligne */
+        flex-direction: column; /* Alignement en colonne */
+        gap: 30px; /* Espacement entre les sections */
+        padding: 0;
     }
+
+.menu-list a {
+    display: flex; /* Alignement en ligne */
+    padding-top: 16px; /* Espacement intérieur */
+    list-style: none; /* Suppression des puces */
+    font-size: 16px; /* Taille de la police */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+    border-top: none; /* Suppression de la bordure supérieure */
+    padding: 0;
+}
+.menu-list a:hover {
+    border-top: none; /* Suppression de la bordure supérieure */
+}    
+    .menu-list li{
+        width: 50%;
+        padding-bottom: 15px;
+        border-bottom: #D9D9D9 solid 3px; /* Apparition de la bordure */
+    }
+
+/**--> Changement de Couleur et Ajout de la bordure au survol des liens <--**/
+.menu-list li:hover{
+    transition: color 0.1s ease; /* Animation de la couleur */
+    color : var(--main-color); /* Changement de la couleur */
+    cursor: pointer; /* Changement de forme du pointeur */
+    border-bottom: var(--main-color) solid 3px; /* Apparition de la bordure */
+}
+/** Bouton de la Search-Bar **/
+.search-bar .search-bar__button {
+    display: flex; /* Appliquer flexbox */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    height: 100%; /* Hauteur de l'espace */
+    width: 49px; /* Largeur de l'espace */
+    background-color: #0065FC; /* Couleur de fond */
+    border-radius: 15px; /* Arrondir les coins */
+    border: none; /* Supprimer la bordure */
+}
+/** Titre du bouton **/
+.search-bar .search-bar__button .text {
+    display: none; /* Masquage du texte pour Desktop & Tablette */
+}
+/** Icône de recherche du bouton **/
+.search-bar .search-bar__button .icon {
+   display:block; /* Affichage de l'icône pour Telephone */
+}
+
+.info-group{
+    padding: 0px 20px;
+}
+
+.search-bar {
+    height: 49px; /* Hauteur de la barre de recherche */
+    display: flex; /* Affichage en ligne */
+    align-items: center; /* Alignement vertical au centre */
+    width: 335px; /* Largeur de la barre de recherche */
+    border: 1px solid #F2F2F2; /* Bordure */
+    border-radius: 15px; /* Arrondir les coins */
+}
+
+/** Bouton FILTRE **/
+.filters__button {
+    display: flex; /* Affichage en ligne */
+    align-items: center; /* Alignement vertical au centre */
+    height: 50px; /* Hauteur du bouton */
+    width: calc(50% - 7.5px); ; /* Largeur du bouton */
+    padding: 4px 19px 4px 19px; /* Espacement intérieur */
+    border: 2px solid #D9D9D9; /* Bordure */
+    border-radius: 25px; /* Arrondir les coins */
+    background-color: transparent; /* Couleur de fond */
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+.hebergements-and-populaires{
+    flex-direction: column-reverse; /* Alignement en colonne */
+}
+
+/** Carte de la section POPULAIRES **/
+.populaires-cards {
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    margin-top: 33px; /* Marge supérieure pour l'espacement */
+}
+
+/** Carte de la section POPULAIRES **/
+.populaires-cards .card {
+    display: flex; /* Affichage en ligne */
+    width: 100%;
+    margin-top: 33px; /* Marge supérieure pour l'espacement */
+}
+/** Image de la carte **/
+.populaires-cards img {
+    width: 50%; /* Largeur de l'image */
+    height: 136px; /* Hauteur de l'image */
+    border-top-left-radius: 20px; /* Arrondir les coins */
+    border-bottom-left-radius: 20px; /* Arrondir les coins */
+}
+/** Div contenu de la carte **/
+.populaires-cards .card-content {
+    width: 67%; /* Largeur de la carte */
+    padding-left: 15px; /* Espacement intérieur */
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    justify-content: space-between; /* Espace entre les éléments */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+/** Titre de la carte **/
+.populaires-cards .card-title {
+    margin-top: 10px; /* Marge supérieure pour l'espacement */
+    margin-bottom: 4px; /* Marge supérieure et inférieure pour l'espacement */
+}
+/** Sous-Titre de la carte **/
+.populaires-cards .card-subtitle {
+    margin: 0; /* Supprimer les marges par défaut */
+}
+/** Notation de la carte **/
+.populaires-cards .card-rating {
+    margin-bottom: 5px; /* Marge inférieure pour l'espacement */
+}
+
+.hebergements{
+    background-color: red; /* Couleur de fond */
+}
+.hebergements__cards-group{
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    gap: 30px; /* Espacement entre les éléments */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+    width: 100%; /* Largeur de la section */
+}
+.hebergements-card{
+    width: 100%;
+}
+
+.activites{
+    background-color: var(--main-bg-color); /* Couleur de fond */
+}
+.activites-cards__group{
+    width: 100%; /* Largeur de la section */
+    display: flex; /* Affichage en ligne */
+    flex-direction: column; /* Alignement en colonne */
+    gap: 30px; /* Espacement entre les éléments */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+}
+.activites-card{
+    width: 100%;
+}
+
 }
