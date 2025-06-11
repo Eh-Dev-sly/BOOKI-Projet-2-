@@ -91,6 +91,7 @@ nav .navbar-logo .logo {
     gap: 35px; /* Espacement entre les boutons */
     box-sizing: border-box; /* Inclure le padding dans la largeur totale */
     border-top: transparent solid 3px; /* Apparition de la bordure */
+    text-align: center;
 }
 
 /**--> Changement de Couleur et Ajout de la bordure au survol des liens <--**/
@@ -109,7 +110,13 @@ nav .navbar-logo .logo {
     box-sizing: border-box; /* Inclure le padding dans la largeur totale */
     display: flex; /* Affichage en ligne */
     flex-direction: column; /* Alignement en colonne */
-    gap: 35px; /* Espacement entre les sections */
+}
+main {
+        margin: 0;
+        padding: 0;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
 }
 
 /******** info Group ********/
@@ -274,10 +281,6 @@ nav .navbar-logo .logo {
 }
 
 /**** InfoBar ****/
-/** InfoGroup **/
-.info-group{
-    margin-bottom: 35px; /* Espacement avec la section "hebergement" */
-}
 /** InfoBar **/
 .infoBar {
     display: flex; /* Affichage en ligne */
@@ -410,6 +413,11 @@ nav .navbar-logo .logo {
     align-items: center; /* Alignement vertical au centre */
 }
 
+/** Lien de la carte **/
+.populaires-cards a {
+    width: 100%; /* Largeur de du lien et donc de la carte */
+}
+
 /** Carte de la section POPULAIRES **/
 .populaires-cards .card {
     display: flex; /* Affichage en ligne */  
@@ -431,6 +439,7 @@ nav .navbar-logo .logo {
     justify-content: space-between; /* Espace entre les éléments */
     box-sizing: border-box; /* Inclure le padding dans la largeur */
 }
+
 /** Titre de la carte **/
 .populaires-cards .card-title {
     margin-top: 10px; /* Marge supérieure pour l'espacement */
@@ -517,7 +526,7 @@ footer {
 }
 /** Section Footer **/
 .footer__section {
-    width: 30%; /* Largeur de la section */
+    width: 100%; /* Largeur de la section */
 }
 
 /** Div contenu Footer **/
@@ -546,6 +555,14 @@ footer {
     font-size: 16px; /* Taille de la police */
 }
 
+    /** Titre des Boutons FILTRE **/
+.filters__button span{
+    font-size: 15px; /* Taille de la police */
+    font-weight: 700; /* Poids de la police */
+    font-style: normal; /* Style de la police */
+    line-height: normal; /* Hauteur de ligne normale */
+    text-align: center; /* Alignement du texte */
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -553,6 +570,13 @@ footer {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    main {
+        margin: 0;
+        padding: 0;
+        gap: 35px;
+        display: flex;
+        flex-direction: column;
+}
     .main-container {
     width: 100%; /* Largeur de la page */
     max-width: 1024px; /* Largeur maximale de la page */
@@ -560,7 +584,6 @@ footer {
     box-sizing: border-box; /* Inclure le padding dans la largeur totale */
     display: flex; /* Affichage en ligne */
     flex-direction: column; /* Alignement en colonne */
-    gap: 30px; /* Espacement entre les sections */
     }
 
     .filters {
@@ -579,7 +602,6 @@ footer {
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
     }
     .populaires-cards {
         display: flex;
@@ -590,9 +612,7 @@ footer {
         width: 30%; /* Largeur de la carte */
         box-sizing: border-box; /* Inclure le padding dans la largeur totale */
     }
-    .populaires-cards a {
-        width: 30%;
-    }
+
     .populaires-cards .card-title {
         font-size: 14px;
     }
@@ -644,18 +664,17 @@ footer {
         display: flex; /* Affichage en ligne */
         align-items: center; /* ou center selon le besoin */
     }
-
-        .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-    
     
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     main{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        margin: 0;
         padding: 0;
     }
     .activities-cards,
@@ -685,19 +704,24 @@ footer {
     /** Personnalisation des Boutons du Menu **/
     .menu-list {
         display: flex; /* Alignement en ligne */
+        text-align: center;
         list-style: none; /* Suppression des puces */
         font-size: 16px; /* Taille de la police */
-        margin-bottom: 35px;
+        margin-bottom: 0;
+        width: 100%;
+        gap: 0;
     }
-    /** Titre des Boutons FILTRE **/
-.filters__button span{
-    font-size: 15px; /* Taille de la police */
-    font-weight: 700; /* Poids de la police */
-    font-style: normal; /* Style de la police */
-    line-height: normal; /* Hauteur de ligne normale */
-    text-align: center; /* Alignement du texte */
-}
+    .menu-list li{
+        text-align: center;
+    }
+    .navbar-menu{
+        width: 100%;
+        text-align: center;
+    }
 
+    nav ul li {
+        flex: 1 1 0;
+    }
     nav ul li a {
         display: inline-block;
         width: 100%;
@@ -745,7 +769,8 @@ footer {
     width: 49px; /* Largeur de l'espace */
     background-color: #0065FC; /* Couleur de fond */
     border-radius: 15px; /* Arrondir les coins */
-    border: none; /* Supprimer la bordure */
+    border: 1px solid #0065FC; /* Bordure bleue */
+    filter: drop-shadow(0px 4px 4px #00000040);
 }
 /** Titre du bouton **/
 .search-bar .search-bar__button .text {
@@ -842,9 +867,6 @@ footer {
     width: 100%; /* Largeur de la section */
 }
 
-.activites{
-    background-color: var(--main-bg-color); /* Couleur de fond */
-}
 .activites-cards__group{
     width: 100%; /* Largeur de la section */
     display: flex; /* Affichage en ligne */
@@ -881,14 +903,12 @@ footer {
 /** Bloc de titre du bouton **/
 .search-bar .search-bar__button .button {
     background-color: transparent; /* Couleur de fond */
-    border: none; /* Supprimer la bordure */
+    border: none; /* Bordure bleue */
     display: flex; /* Flex pour centrer le contenu */
     align-items: center; /* Centrage vertical */
     justify-content: center; /* Centrage horizontal */
     width: 100%; /* Largeur totale */
     height: 100%; /* Hauteur totale */
-    
-    filter: drop-shadow(16px 15px 15px rgba(0, 0, 0, 0.1));
 }
 
 /** Image de la carte **/
@@ -912,5 +932,13 @@ footer {
         width: 100%;
         margin-top: 15px;
     }
+
+    .menu-list a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--main-bg-color);
+}
 
 }
