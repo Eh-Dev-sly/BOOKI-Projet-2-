@@ -521,7 +521,6 @@ footer {
     width: 100%; /* Largeur de la section */
     height: fit-content; /* Hauteur de la section */
     display: flex; /* Affichage en ligne */
-    flex-wrap: wrap; /* Permettre le passage à la ligne si nécessaire */
     box-sizing: border-box; /* Prendre en compte la bordure et le padding dans la largeur totale */
 }
 /** Section Footer **/
@@ -594,6 +593,7 @@ footer {
 
     .hebergements-and-populaires {
         flex-direction: column;
+        gap: 50px;
     }
 
     .hebergements {
@@ -607,14 +607,15 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
     }
     .populaires-cards .card {
-        width: 30%; /* Largeur de la carte */
+        width: 100%; /* Largeur de la carte */
         box-sizing: border-box; /* Inclure le padding dans la largeur totale */
     }
 
     .populaires-cards .card-title {
-        font-size: 14px;
+        font-size: 15px;
     }
     .populaires-cards .card-subtitle {
         font-size: 13px;
@@ -657,7 +658,7 @@ footer {
         /** Div contenu de la carte **/
     .activites-card__content{
         padding: 20px 19px; /* Espacement intérieur */
-        font-size: 14px; /* Taille de la police */
+        font-size: 13px; /* Taille de la police */
         box-sizing: border-box; /* Inclure le padding dans la largeur */
         border-radius: 0 0 20px 20px; /* Arrondir les coins inférieurs */
         flex: 1; /* Permet à la div de prendre tout l'espace restant */
