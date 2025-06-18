@@ -299,6 +299,7 @@ main {
     width: 24px; /* Largeur de l'icône */
     height: 24px; /* Hauteur de l'icône */
     border-radius: 50%; /* Arrondir les coins */
+    flex: none; /* Evite à l'icône de se compresser ou de s'étirer */
 }
 /** Icône de INFOBAR **/
 .infoBar__icon img {
